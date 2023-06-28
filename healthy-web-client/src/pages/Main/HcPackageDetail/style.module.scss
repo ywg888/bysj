@@ -1,0 +1,155 @@
+.pkgDetail {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
+  height: calc(100vh - 180px - 45px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+:global {
+  .adm-capsule-tabs {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  :global {
+    .adm-capsule-tabs-content {
+      flex: 1;
+      overflow: auto;
+    }
+  }
+}
+
+.footer {
+  height: 54px;
+  background-color: #fff;
+  background-color: #ececec;
+  border: 1px solid #cfcfcf;
+  display: flex;
+  align-items: center;
+  .leftPrice {
+    flex: 1;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  .rightPay {
+    width: 140px;
+    background: #328ee9;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+  }
+}
+
+
+
+// 介绍部分
+.price {
+  color: #fb5555;
+  font-size: 20px;
+}
+
+.baseInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  .name {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .count {
+    color: #827c7c;
+  }
+}
+
+.detailInfo {
+  .detailItem {
+    margin-top: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    .leftIcon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rightText {
+      margin-left: 10px;
+      flex: 1;
+      overflow: hidden;
+      * {
+        color: #5e5b5b;
+        margin-top: 5px;
+      }
+      .rightTitle {
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .rightContent {
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+// 体检项目部分
+.hcProjectsHeader{
+  display: flex;
+  gap: 10%;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+  *{
+    background-color: #96ccf2;
+    color: #fff;
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerName{
+    width: 30%;
+  }
+  .headerIntroduce {
+    flex: 1;
+  }
+}
+
+.hcProjectsContent{
+  margin-top: 10px;
+  overflow: auto;
+}
+
+// 体检须知部分
+.hcInstructionsTitle{
+  color: #96ccf2;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+.hcInstructionsUl {
+  margin-top: 20px;
+  *{
+    margin-top: 8px;
+  }
+}

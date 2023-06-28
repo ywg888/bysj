@@ -1,0 +1,46 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url(../../assets/imgs/12.jpg);
+  background-size: cover;
+  overflow: auto;
+}
+
+.login::before {
+  content: "";
+  position: absolute; /* 一定要用绝对定位 */
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px); /* 模糊半径 */
+}
+
+.loginBox {
+  position: fixed;
+  z-index: 10;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  border: 1px solid  rgba($color: #000000, $alpha: 0.2);
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  box-shadow: 0 0 15px 3px rgba($color: #000000, $alpha: 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+
+  .title {
+    color: #273c75;
+    text-align: center;
+    font-size: 38px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .content {
+    // border: 1px solid red;
+    width: 84%;
+    margin-top: 20px;
+  }
+}
