@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "noImplicitUseStrict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

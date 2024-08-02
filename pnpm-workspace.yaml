@@ -1,0 +1,4 @@
+packages:
+  - 'healthy-server'
+  - 'healthy-web-admin'
+  - 'healthy-web-client'

@@ -1,0 +1,25 @@
+.healthyCheckup {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #efefef;
+}
+
+.nav {
+  background-color: #fff;
+}
+
+.main {
+  flex: 1;
+  overflow: auto;
+}
+
+.avatar {
+  --border-radius: 50%;
+  --size: 35px;
+}
+
+.queuedProsContainer {
+  padding: 10px;
+}

@@ -1,0 +1,67 @@
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 109px;
+  align-items: center;
+  height: 500px;
+
+  .avatar {
+    margin-top: 50px;
+  }
+  .name {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 15px;
+    font-family: "DengXian";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+    color: #333333;
+  }
+  .input {
+    box-sizing: border-box;
+    width: 220px;
+    height: 40px;
+    margin-top: 16px;
+    border: 1px solid #3291ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    .search {
+      width: 40px;
+      height: 40px;
+      background: #3291ff;
+      border-radius: 10px 0px 0px 10px;
+      color: #fff;
+      line-height: 40px;
+      font-size: 18px;
+    }
+    :global {
+      .adm-input {
+        height: 40px;
+        text-align: center;
+
+        .adm-input-element {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    background: #3291ff;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+  }
+}

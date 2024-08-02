@@ -1,0 +1,15 @@
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+.bottom {
+  flex: 0;
+  border-top: solid 1px var(--adm-color-border);
+}

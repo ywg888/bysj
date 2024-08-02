@@ -1,0 +1,21 @@
+.loadingBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .overlayContent {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+      color: black;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+}
