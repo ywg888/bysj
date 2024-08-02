@@ -1,35 +1,23 @@
-import { Button, Form, Input } from "antd"
-import { useCallback } from "react"
-import usePerson from "../../hooks/usePerson"
-import styles from "./index.module.scss"
-import { useNavigate } from "react-router-dom"
+import { Button, Form, Input } from "antd";
+import styles from "./index.module.scss";
+import usePerson from "../../hooks/usePerson";
 
-export default function Login() {
-  const { adminLogin } = usePerson()
-  const navigate = useNavigate()
-  const onFinish = useCallback(
-    (values: any) => {
-      adminLogin(values)
-    },
-    [adminLogin]
-  )
+export default function Regist() {
+  const { adminRegist } = usePerson()
 
-  const handleRegist = () => {
-    console.log('ywg-regist')
-    navigate('/regist')
-  }
+  const handleClickRegist = (values: any) => {
+    console.log("regist",values);
+    adminRegist(values)
+  };
 
   return (
-    <div className={styles.login}>
-      <main>
-        <div className={styles.loginBox}>
-          <div className={styles.title}>Healthy APP</div>
-          <div className={styles.content}>
-            <Form
+    <div className={styles.regist}>
+      <div>注册</div>
+      <Form
               name='basic'
               labelCol={{ span: 8 }}
               style={{ maxWidth: 600 }}
-              onFinish={onFinish}
+              onFinish={handleClickRegist}
               autoComplete='off'
             >
               <Form.Item
@@ -53,16 +41,10 @@ export default function Login() {
 
               <Form.Item style={{ paddingLeft: 150 }}>
                 <Button style={{ width: 100 }} type='primary' htmlType='submit'>
-                  登录
-                </Button>
-                <Button style={{ width: 100, marginLeft: 50, overflow: "hidden" }} onClick={handleRegist} type='default'>
-                  注册
+                提交
                 </Button>
               </Form.Item>
             </Form>
-          </div>
-        </div>
-      </main>
     </div>
-  )
+  );
 }

@@ -9,7 +9,9 @@ const whiteList = [
   "/api/user/register",
   "/wxLogin/Feed_App.svg",
   "/api/user/adminLogin",
+  "/favicon.ico",
   // "/api/project/listPros",
+  "/api/user/adminRegiste",
 ]
 
 /**

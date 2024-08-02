@@ -14,7 +14,7 @@ export default function MyOrder() {
       </nav>
       <main>
         <List style={{marginTop:10}} mode='card'>
-          {orders.map((item) => (
+          {orders.reverse().map((item) => (
             <MyOrderItem order={item} key={item._id} />
           ))}
         </List>

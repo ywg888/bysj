@@ -22,7 +22,7 @@ const wxInfoArr: wxInfo[] = []
 // 微信授权
 router.get("/wxAuthorize", async (ctx) => {
   const { code } = ctx.query
-  ctx.redirect(`http://127.0.0.1:4000/wxLogin/${code}`)
+  ctx.redirect(`http://${process.env.WEB_CLIENT_URL}/wxLogin/${code}`)
 })
 
 // 登录
@@ -133,6 +133,17 @@ router.post("/adminLogin", async (ctx) => {
 })
 
 // 管理员端注册功能
-router.post("/adminRegister", async (ctx) => {})
+router.post("/adminRegiste", async (ctx) => {
+  const { account, password } = validate(
+    ctx.request.body,
+    Joi.object({
+      account: Joi.string().required(),
+      password: Joi.string().max(20).required(),
+    })
+  )
+
+  await user.adminRegist(account, password)
+  ctx.body = new JsonResp()
+})
 
 export default router

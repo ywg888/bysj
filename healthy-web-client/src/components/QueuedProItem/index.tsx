@@ -30,18 +30,20 @@ export default function QueuedProItem({
 
   const rightBtnRender = useCallback(
     (status: IUserProStatus) => {
+      const handleClick = () => {
+        Modal.confirm({
+          content: "确认参加吗？",
+          onConfirm: () => join(userProId),
+        })
+      }
+
       switch (status) {
         case IUserProStatus.unfinished:
           return (
             <Button
               color='danger'
               size='mini'
-              onClick={() =>
-                Modal.confirm({
-                  content: "确认参加吗？",
-                  onConfirm: () => join(userProId),
-                })
-              }
+              onClick={handleClick}
               disabled={pendingStatus}
             >
               未完成

@@ -1,6 +1,6 @@
 import { IUser } from "../../type"
 import request from "../request"
-import { IAdminLoginReq } from "../types/reqType"
+import { IAdminLoginReq, IRegisterReq } from "../types/reqType"
 import { IApiResp } from "../types/respType"
 
 // 管理员登录
@@ -8,10 +8,10 @@ export const adminLogin = (param: IAdminLoginReq): Promise<IApiResp> => {
   return request.post("/user/adminLogin", param)
 }
 
-// 管理员注册 (后期待改)
-// export const register = (param: IRegesterReq): Promise<IApiResp> => {
-//   return request.post("/user/register", param)
-// }
+// 管理员注册
+export const adminRegist = (param: IRegisterReq): Promise<IApiResp> => {
+  return request.post("/user/adminRegiste", param)
+}
 
 // 退出登录
 export const logout = (): Promise<IApiResp> => {

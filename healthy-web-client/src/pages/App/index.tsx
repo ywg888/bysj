@@ -31,7 +31,7 @@ function App() {
 
   // 获取websocket
   const getWebSocket = useCallback(() => {
-    const webSocket = new WebSocket("ws://127.0.0.1:9999")
+    const webSocket = new WebSocket(`ws://${process.env.REACT_APP_WS_SERVER_URL}`)
     webSocket.onopen = () => {
       console.log("建立ws长连接")
     }
@@ -47,8 +47,9 @@ function App() {
     webSocket.onmessage = (e) => {
       const reader = new FileReader()
       reader.readAsText(e.data, "UTF-8")
-      reader.onload = () =>
+      reader.onload = () => {
         PubSub.publish("joinOrFinishPro", JSON.parse(reader.result as string))
+      }
     }
 
     setWs(webSocket)

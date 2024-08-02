@@ -9,17 +9,23 @@
 + `.env`
 
 ```json
-# 后端端口
-PORT=4015
+# 服务端端口
+PORT = 5001
+# websocket服务器端口
+WS_PORT = 5002
+# web客户端地址
+WEB_CLIENT_URL = 124.220.0.213:4001
+# web管理员端地址
+WEB_SERVER_URL = 124.220.0.213:4002
 # mongodb数据库地址
-MONGO_URL=mongodb://127.0.0.1:27017/feed-submit
+MONGO_URL = mongodb://127.0.0.1:27017/healthy-app
 # 加密cookie的随机字符串
-KEYS=["1aba0a6cd04f1a58f904bfc55c6d46b1a4105fed23e7643a0b40992737d55ecc"]
+KEYS = ["1aba0a6cd04f1a58f904bfc55c6d46b1a4105fed23e7643a0b40992737d55ecc"]
 
 # 微信公众平台测试号appID
-APPID = wx4068bd3a6377f0cd
+APPID = wxe42e7d56276d29d8
 # 微信公众平台测试号appsecret
-APPSECRET = 3dd566748ed79e3e8216d1930050ae6c
+APPSECRET = 1a5b68da6c53cc3fe7bd8df55ff6d67d
 
 # 阿里云访问键id
 ACCESSKEYID = LTAI5tLARXYdXBr4CwQ2s16j

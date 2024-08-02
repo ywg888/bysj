@@ -6,6 +6,8 @@ export interface IAdminLoginReq {
   password: string
 }
 
+export interface IRegisterReq extends IAdminLoginReq {}
+
 export interface IGetUserInfoReq {
   account?: string
 }

@@ -160,3 +160,22 @@ export async function adminLogin(
   await db.sessions.insertOne(session)
   return sid
 }
+
+export async function adminRegist(
+  account: string,
+  password: string,
+) {
+  const findUser = await db.users.findOne({ account })
+  if (findUser) throw stats.ErrAccountExists
+  const user = {
+    openid: '',
+    avatar: '',
+    banner: "",
+    account,
+    password,
+    nickname: '',
+    createdAt: Date.now(),
+    introduce: "",
+  } as IUser
+  await db.users.insertOne(user)
+}

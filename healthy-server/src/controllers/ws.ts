@@ -4,7 +4,7 @@ import WebSocket from "ws"
 // 客户端通过ws发送数据需要添加字段account来标明自己的身份(为后期识别自己做准备)
 
 export default function createWebsocket() {
-  const wss = new WebSocket.Server({ port: +process.env.WX_PORT })
+  const wss = new WebSocket.Server({ port: +process.env.WS_PORT })
   wss.on("connection", (client) => {
     console.log("有用户连接了")
     client.on("message", (msg) => {

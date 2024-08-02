@@ -52,7 +52,7 @@ export default function useUserProject() {
   useEffect(() => {
     listPros()
       .then((res) => {
-        const projectArr = res.data.map((item) => {
+        const projectArr = res.data?.map((item) => {
           const { _id, name } = item
           return { _id, name }
         })
